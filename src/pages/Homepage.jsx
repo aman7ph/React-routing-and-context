@@ -1,11 +1,26 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './Homepage.module.css';
+import Nav from '../componets/Nav';
 
-const Homepage = () => {
+export default function Homepage() {
     return (
-        <div>
-            <h1>wordwise</h1>
-        </div>
+        <main className={styles.homepage}>
+            <Nav />
+            <section>
+                <h1>
+                    You travel the world.
+                    <br />
+                    WorldWise keeps track of your adventures.
+                </h1>
+                <h2>
+                    A world map that tracks your footsteps into every city you
+                    can think of. Never forget your wonderful experiences, and
+                    show your friends how you have wandered the world.
+                </h2>
+            </section>
+            <Link to="/app" className="cta">
+                Starrt Tracking Now
+            </Link>
+        </main>
     );
-};
-
-export default Homepage;
+}

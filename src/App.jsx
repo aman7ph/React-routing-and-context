@@ -6,15 +6,17 @@ import Product from './pages/product';
 import Homepage from './pages/homepage';
 import Pricing from './pages/pricing';
 import N404 from './pages/N404';
-import Nav from './componets/Nav';
+import AppLayout from './pages/AppLayout';
+import Login from './pages/Login';
 
 const App = () => {
     return (
         <div>
-            <Nav />
             <BrowserRouter>
                 <Routes>
-                    <Route path="home" element={<Homepage />} />
+                    <Route path="/" element={<Homepage />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/app" element={<AppLayout />} />
                     <Route path="product" element={<Product />} />
                     <Route path="pricing" element={<Pricing />} />
                     <Route path="*" element={<N404 />} />
